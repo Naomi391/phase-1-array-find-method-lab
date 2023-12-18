@@ -72,12 +72,12 @@ superbowlWin(record);
 */
 
 function superbowlWin(record) {
-  const winYear = record.find((entry) => entry.result === "W");
+  const winYear = record.find((goal) => goal.result === "W");
   if (winYear) {
     return winYear.year;
   } else {
     return undefined;
   }
 }
-const winYear = superbowlWin(record);
-console.log(winYear);
+const winningYear = superbowlWin(record);
+console.log(winningYear);
