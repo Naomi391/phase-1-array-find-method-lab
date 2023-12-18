@@ -1,4 +1,5 @@
 // code your solution here
+//This is the array that is to be checked
 const record = [
   { year: "2018", result: "N/A" },
   { year: "2017", result: "N/A" },
@@ -60,24 +61,17 @@ const record = [
   { year: "1961", result: "N/A" },
   { year: "1960", result: "N/A" },
 ];
-/*
-function superbowlWin(record) {
-  if (record.find() === "W") {
-    return record.year;
-  } else {
-    return undefined;
-  }
-}
-superbowlWin(record);
-*/
 
 function superbowlWin(record) {
-  const winYear = record.find((goal) => goal.result === "W");
+  //Function that takes the record array as the parameter
+  const winYear = record.find((goal) => goal.result === "W"); //find() method which takes goal as the parameter and checks whether it was  win-win
   if (winYear) {
+    //if the variable is true, return the year
     return winYear.year;
   } else {
+    //else return undefined
     return undefined;
   }
 }
-const winningYear = superbowlWin(record);
-console.log(winningYear);
+const winningYear = superbowlWin(record); //call the function and store in a new variable
+console.log(winningYear); //checks whether the variable will return the first winning year
